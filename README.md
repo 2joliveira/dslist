@@ -1,6 +1,6 @@
 # 📋 DS List API
 
-API RESTful desenvolvida em Java com Spring Boot, projetada para listagem de itens. A API permite listar todos os itens, listar um item específico, listar as listas de itens, listar os itens de uma lista específica
+API REST desenvolvida em Java com Spring Boot, projetada para listagem de itens. A API permite listar todos os itens, listar um item específico, listar as listas de itens, listar os itens de uma lista específica
 
 ## 🚀 Tecnologias utilizadas
 
@@ -51,16 +51,22 @@ Configure a variável spring.profiles.active no arquivo application.properties p
 
 ## 📮 Endpoints
 
-| Método   | Endpoint                       | Descrição                           | Parâmetros / Body             |
-| ---------|--------------------------------|-------------------------------------|------------------------------ |
-| `GET`    | `/games`                       | Lista todos os jogos                | —                             |
-| `GET`    | `/games/{game_id}`             | Busca jogo por ID                   | `game_id` (path param)        |
-| `GET`    | `/lists`                       | Busca listas de jogos               | —                             |
-| `GET`    | `/lists/{list_id}/games`       | Busca jogos de uma lista específica | `list_id` (path param)        |
-| `POST`   | `/lists/{list_id}/replacement` | Altera a posição do jogo na lista   | `list_id` (path) + JSON       |
+| Método   | Endpoint                       | Descrição                                         | Parâmetros / Body             |
+| ---------|--------------------------------|---------------------------------------------------|------------------------------ |
+| `GET`    | `/games`                       | [Listar todos os jogos][games]                    | —                             |
+| `GET`    | `/games/{game_id}`             | [Busca jogo por ID][game]                         | `game_id` (path param)        |
+| `GET`    | `/lists`                       | [Busca listas de jogos][lists]                    | —                             |
+| `GET`    | `/lists/{list_id}/games`       | [Busca jogos de uma lista específica][games-list] | `list_id` (path param)        |
+| `POST`   | `/lists/{list_id}/replacement` | Altera a posição do jogo na lista                 | `list_id` (path) + JSON       |
 
 
 ## 🌐 Deploy
 A aplicação está hospedada na Render e pode ser acessada por:
 
 URL da API: https://dslist-1q5q.onrender.com
+
+
+[games]: https://dslist-1q5q.onrender.com/games
+[game]: https://dslist-1q5q.onrender.com/game/2
+[lists]: https://dslist-1q5q.onrender.com/lists
+[games-list]: https://dslist-1q5q.onrender.com/lists/1/games
